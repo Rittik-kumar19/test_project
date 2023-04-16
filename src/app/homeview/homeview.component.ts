@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../data.service';
+import { CookieService } from 'ngx-cookie-service';
 
 @Component({
   selector: 'app-homeview',
@@ -10,7 +11,7 @@ export class HomeviewComponent implements OnInit {
 
   tableData: any[] = [];
 
-  constructor(private tableDataService: DataService) { }
+  constructor(private tableDataService: DataService, private cookieService: CookieService) { }
 
   ngOnInit(): void {
     this.tableData = this.tableDataService.getTableData();
@@ -25,6 +26,9 @@ export class HomeviewComponent implements OnInit {
 
     const tableDataString = this.tableDataService.getTableDataAsString();
     const url = '/relogin/' + encodeURIComponent(tableDataString);
+    // const url = '/relogin/';
+
+    // this.cookieService.set('tableData', tableDataString, {expires:1});
     console.log(encodeURIComponent(tableDataString))
     window.open(url);
   }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { CookieService } from 'ngx-cookie-service';
 
 @Component({
   selector: 'app-relogin',
@@ -10,7 +11,7 @@ export class ReloginComponent implements OnInit {
 
   tableData: any[] = [];
 
-  constructor(private route: ActivatedRoute) { }
+  constructor(private route: ActivatedRoute, private cookieService: CookieService) { }
 
   ngOnInit(): void {
     this.route.paramMap.subscribe(params => {
@@ -20,6 +21,8 @@ export class ReloginComponent implements OnInit {
         this.tableData = JSON.parse(decodedTableDataString);
       }
     });
+    // const tableDataString = this.cookieService.get('tableData');
+    // this.tableData = JSON.parse(tableDataString);
   }
 
   onBackToApp(): void{
