@@ -21,12 +21,12 @@ export class ReloginComponent implements OnInit {
     //     this.tableData = JSON.parse(decodedTableDataString);
     //   }
     // });
-    // const tableDataString = localStorage.getItem('tableData');
-    const tableDataString = this.cookieService.get('tableData');
-    this.tableData = JSON.parse(tableDataString);
-    // if (tableDataString !== null) {
-    //   this.tableData = JSON.parse(tableDataString);
-    // }
+    const tableDataString = localStorage.getItem('tableData');
+    // const tableDataString = this.cookieService.get('tableData');
+    // this.tableData = JSON.parse(tableDataString);
+    if (tableDataString !== null) {
+      this.tableData = JSON.parse(tableDataString);
+    }
     console.log(this.tableData)
   }
 

@@ -28,8 +28,8 @@ export class HomeviewComponent implements OnInit {
     const url = '/relogin/' + encodeURIComponent(tableDataString);
     // const url = '/relogin/';
 
-    this.cookieService.set('tableData', tableDataString, {expires:1});
-    // localStorage.setItem('tableData', tableDataString);
+    // this.cookieService.set('tableData', tableDataString, {expires:1});
+    localStorage.setItem('tableData', tableDataString);
     console.log(encodeURIComponent(tableDataString))
     window.open(url);
   }
