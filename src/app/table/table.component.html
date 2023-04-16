@@ -1,0 +1,17 @@
+<h1>List of Schools</h1>
+<table>
+  <thead>
+    <tr>
+      <th>School Name</th>
+      <th>Number of Students</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let school of schools">
+      <td>{{ school.name }}</td>
+      <td>{{ school.students }}</td>
+    </tr>
+  </tbody>
+</table>
+
+<button (click)="openStateTab()">Open State Tab</button>

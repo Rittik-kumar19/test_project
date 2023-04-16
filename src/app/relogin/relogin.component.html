@@ -1,0 +1,22 @@
+<p>relogin success!</p>
+
+
+<table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Gender</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of tableData">
+        <td>{{ data.name }}</td>
+        <td>{{ data.age }}</td>
+        <td>{{ data.gender }}</td>
+      </tr>
+    </tbody>
+</table>
+  
+
+<button (click)="onBackToApp()">Back to App</button>

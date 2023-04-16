@@ -1,0 +1,14 @@
+<h1>Number of Districts in a State</h1>
+<p>Total Number of Districts: {{ totalPopulation }}</p>
+<table>
+  <thead>
+    <tr>
+      <th>District Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let district of districts">
+      <td>{{ district.name }}</td>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,21 @@
+<p>homeview works!</p>
+
+<h1>Table Data sharing</h1>
+<table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Gender</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of tableData">
+        <td>{{ data.name }}</td>
+        <td>{{ data.age }}</td>
+        <td>{{ data.gender }}</td>
+      </tr>
+    </tbody>
+</table>
+
+<button (click)="openNewTab()">Open New Tab</button>

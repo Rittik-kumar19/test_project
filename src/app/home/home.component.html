@@ -1,0 +1,13 @@
+<button class="btn btn-outline-primary" routerLink = "/">Home</button>
+<button class="btn btn-outline-primary" routerLink="/cart">cart</button>
+
+<h1>Home component</h1>
+<h2>Total Items: {{items.length}}</h2>
+<h2>Total Items via services: {{cart.length}}</h2>
+
+<input type="text" class="form-control" #rfna>
+<button (click)="entername(rfna)" class="btn btn-primary">Enter name</button>
+
+
+
+<!-- <app-firstcomponent [customer]="name" (cartEvent)="updateCart($event)"></app-firstcomponent> -->
